@@ -15,7 +15,6 @@ const tripsSchema = new mongoose.Schema({
         stationFrom: {type:String,trim:true,required:true,unique:true},
         stationTo: {type:String,trim:true,required:true,unique:true},
         DriverName:{type:String,required:true,trim:true}
-        
     }]
     
 })

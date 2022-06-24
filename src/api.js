@@ -150,7 +150,7 @@ app.get('/trip/:area',(req,res)=>{
             return res.send("area were not found")
         }
         
-        res.send(trip)
+        res.send(trip[0].busesONTrip)
     })
 })
 
