@@ -143,16 +143,21 @@ app.post('/tripCreate',(req,res)=>{
         res.status(400).send(e)
 }
 })
-app.get('/trip/:area',(req,res)=>{
+app.get('/trip/:area',async (req,res)=>{
+    try{
 
-    Trip.find({"stationsINTrip.stationName": req.params.area.toLowerCase()}).then((trip)=>{
+    const trip = await Trip.find({"stationsINTrip.stationName": req.params.area.toLowerCase()})
         if(!trip){
             return res.send("area were not found")
         }
         
-        res.send(trip[0].busesONTrip)
-    })
+        res.send(trip[0]?.busesONTrip)
+    }catch(e){
+        res.send(e)
+    }
+    
 })
+
 
 app.get('/passengerReports',async(req,res)=>{
     try{
