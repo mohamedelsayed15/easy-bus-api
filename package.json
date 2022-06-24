@@ -1,0 +1,23 @@
+{
+  "name": "easy-bus",
+  "version": "1.0.0",
+  "description": "REST API basics Easy Bus API documentation Link : https://easybus-api.herokuapp.com/",
+  "main": "api.js",
+  "scripts": {
+    "start": "node src/api.js",
+    "dev": "nodemon src/api.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.1",
+    "mongodb": "^4.6.0",
+    "mongoose": "^6.4.0",
+    "nodemon": "^2.0.16",
+    "request": "^2.88.2",
+    "validator": "^13.7.0"
+  }
+}
